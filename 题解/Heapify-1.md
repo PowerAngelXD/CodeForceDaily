@@ -1,6 +1,6 @@
 # Heapify-1
 ## 题面
-You are given a permutation $a$ of length $n$$^{\text{∗}}$.
+You are given a permutation $a$ of length $n$ $^{\text{∗}}$.
 
 You can perform the following operation any number of times (possibly zero):
 
