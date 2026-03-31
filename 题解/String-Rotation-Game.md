@@ -8,7 +8,7 @@ Define a **block** in a string as a contiguous substring of characters of the sa
 -   d ($7$\-th character)
 -   aa ($8$\-th to $9$\-th characters).
 
-You are playing a game where you are given a string $s$ of length $n$. You can cyclically rotate$^{\text{∗}}$ the string however you want. Your score is then calculated as the number of blocks in the final string. Please find the maximum score possible.
+You are playing a game where you are given a string $s$ of length $n$. You can cyclically rotate $^{\text{∗}}$ the string however you want. Your score is then calculated as the number of blocks in the final string. Please find the maximum score possible.
 
 $^{\text{∗}}$Formally, choose an index $1 \leq i \leq n$, and replace the string $s_1s_2\ldots s_n$ with the string $s_{i+1}s_{i+2}\ldots s_ns_1s_2\ldots s_{i}$. For example, the string abcde can be rotated to string deabc by choosing $i=3$.
 
