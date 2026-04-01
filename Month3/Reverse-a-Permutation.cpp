@@ -10,24 +10,24 @@ int main() {
 		int n;
 		cin >> n;
 
-		int p[n + 5], idx = 1;
+		int p[n + 5], l = 1;
 
 		for(int i = 1; i <= n; i ++) {
 			cin >> p[i];
 		}
 
-		while(idx <= n && p[idx] == n - idx + 1) idx ++;
-		int id = -1;
+		while(l <= n && p[l] == n - l + 1) l ++;
+		int r = -1;
 
-		for(int i = idx; i <= n; i ++) {
-			if( p[i] == n - idx + 1) id = i;
+		for(int i = l; i <= n; i ++) {
+			if( p[i] == n - l + 1) r = i;
 		}
 
-		for(int i = 1; i < idx; i ++ ) cout << p[i] << ' ';
+		for(int i = 1; i < l; i ++ ) cout << p[i] << ' ';
 
-		if(id != -1) {
-			for( int i = id; i >= idx; i --) cout << p[i] << ' ';
-			for( int i = id + 1; i <= n; i ++) cout << p[i] << ' ';
+		if(r != -1) {
+			for( int i = r; i >= l; i --) cout << p[i] << ' ';
+			for( int i = r + 1; i <= n; i ++) cout << p[i] << ' ';
 		}
 		cout << '\n';
 	}
