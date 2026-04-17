@@ -64,7 +64,7 @@ For each test case, output the maximum possible sum of the numbers in the table.
 
 #### 第二步：剩余单侧角色用 `both` 补齐
 
-第一步后，$R,C$ 至多只有一个还大于 $0$。这些剩余元素必须和 `both` 配才有效
+第一步后，$R,C$ 至多只有一个还大于 $0$ 这些剩余元素必须和 `both` 配才有效
 
 - 可补数量：$y=\min(B, R+C)$
 - 答案加 $y$
