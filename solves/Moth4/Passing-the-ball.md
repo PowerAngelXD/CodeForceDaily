@@ -42,7 +42,7 @@ For each test case, print one integer — the number of students who will receiv
 
 然后按题意模拟并记录出现过的人：
 
-- 用 `visited` 记录是否接到过球。初始时 $cur=1$，先标记 `visited[1]=true`（因为 1 号一开始就接到球）
+- 用 `visited` 记录是否接到过球  初始时 $cur=1$，先标记 `visited[1]=true`（因为 1 号一开始就接到球）
 - 再进行恰好 $n$ 次传球：每次令 $cur \leftarrow nxt[cur]$，并标记 `visited[cur]=true`
 - 最后统计 `visited` 为 `true` 的人数，就是答案
 
