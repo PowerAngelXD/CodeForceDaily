@@ -32,3 +32,37 @@ $ans_i=\max\Bigl(\#\{j\mid j\gt i,\ a_j\gt a_i\},\ \#\{j\mid j\gt i,\ a_j\lt a_i
 这个上界可以通过极端取值的 $k$ 直接达到\
 取足够大的 $k$ 会让所有满足 $a_j\gt a_i$ 的位置都满足 $|a_i-k|\gt|a_j-k|$，得到第一项\
 取足够小的 $k$ 会让所有满足 $a_j\lt a_i$ 的位置都满足 $|a_i-k|\gt|a_j-k|$，得到第二项
+
+## 代码
+```c++
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t --) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i ++) {
+            cin >> a[i];
+        }
+
+        vector<int> ans(n);
+        for (int i = 0; i < n; i ++) {
+            int less = 0, greater = 0;
+            for (int j = i + 1; j < n; j ++) {
+                if (a[j] < a[i]) less ++;
+                else if (a[j] > a[i]) greater ++;
+            }
+            ans[i] = max(less, greater);
+        }
+
+        for (int i = 0; i < n; i ++) {
+            cout << ans[i] << " \n"[i == n - 1];
+        }
+    }
+}
+```
